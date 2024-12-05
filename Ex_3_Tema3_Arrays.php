@@ -1,19 +1,19 @@
 <?php
 declare(strict_types = 1);
 
-$array = array ("rAquel", "max", "alicia", "danou");
-$caracter = "B";
+$palabras = array ("rAquel", "max", "alicia", "danou");
+$caracter = "a";
 
-encontrarValor ($array, $caracter);
+encontrarValor ($palabras, $caracter);
 
-function encontrarValor (array $array, string $caracter) {
+function encontrarValor (array $palabras, string $caracter) : void{
     $i=0;
     $encontrado=true;
 
-$arrayMinus= array_map("strtolower", $array);
+$arrayMinus= array_map("strtolower", $palabras);
 $caracterMinus = strtolower ($caracter);   
 
-while ($i<count($arrayMinus) && $encontrado=true) {
+while ($i < count($arrayMinus) && $encontrado) {
     if(!str_contains($arrayMinus[$i], $caracterMinus)) {
     	$encontrado = false;
     } 
